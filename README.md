@@ -6,6 +6,8 @@
 
 ### 3300 - loan calculator Python Flask web app
 
+**Developers:** Athena Phommivong
+
 Basic Flask application using Jinja templates. The user enters details of their loan and it calculates the monthly payment and an amortization table.
 
 This application is used to teach CI/CD including automated testing and GitHub Actions workflow files (.yaml)
