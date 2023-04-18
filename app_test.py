@@ -66,6 +66,18 @@ def test_home_page(client):
     print(" -- home page loads functional test")
     assert b"Loan Calculator" in response.data
 
+def test_404_page(client):
+    """
+    GIVEN a user doesn't reach the server properly
+    WHEN the page loads
+    THEN the user sees a 404 error page
+    """
+    response = client.get("/x")
+    assert response.status_code == 404
+    print("\r")
+    print(" -- Error 404")
+    assert b"The requested page could not be found." in response.data
+
 
 def test_calculate_loan_payment(client):
     """
